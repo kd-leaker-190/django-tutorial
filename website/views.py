@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 
 def http_test(req):
@@ -7,10 +8,10 @@ def json_test(req):
     return JsonResponse({ 'message': 'This is a json test url' })
 
 def index_view(req):
-    return HttpResponse('<h1>Home page</h1>')
+    return render(req, 'home/index.html')
 
 def about_view(req):
-    return HttpResponse('<h1>About page</h1>')
+    return render(req, 'home/about.html')
 
 def contact_view(req):
-    return HttpResponse('<h1>Contact page</h1>')
+    return render(req, 'home/contact.html')
