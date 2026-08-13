@@ -60,14 +60,14 @@
       <div class="container main-menu">
         <div class="row align-items-center justify-content-between d-flex">
           <div id="logo">
-            <a href="index.html"
+            <a href="{% url 'home' %}"
               ><img src="{% static 'img/logo.png' %}" alt="" title=""
             /></a>
           </div>
           <nav id="nav-menu-container">
             <ul class="nav-menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
               <li class="menu-has-children">
                 <a href="">Blog</a>
                 <ul>
@@ -97,9 +97,7 @@
     </header>
     <!-- #header -->
 
-    {% block content %}
-    
-    {% endblock %}
+    {% block content %} {% endblock %}
 
     <!-- start footer Area -->
     <footer class="footer-area section-gap">
@@ -122,7 +120,7 @@
               <div class="row">
                 <div class="col">
                   <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="#">Feature</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
@@ -133,7 +131,7 @@
                     <li><a href="#">Team</a></li>
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
                   </ul>
                 </div>
               </div>
