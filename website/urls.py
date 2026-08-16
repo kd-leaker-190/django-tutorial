@@ -1,6 +1,8 @@
 from django.urls import path
 from website.views import *
 
+app_name = 'website'
+
 urlpatterns = [
     path('http-test', http_test, name='http-test'),
     path('json-test', json_test, name='json-test'),
